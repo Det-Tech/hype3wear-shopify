@@ -11,6 +11,43 @@
     padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
   }
 
+    /* Start state */
+  .animated-modal {
+    max-width: 550px;
+    border-radius: 4px;
+    overflow: hidden;
+    
+    transform: translateY(-50px);
+    transition: all .7s;
+  }
+
+  .animated-modal h2,
+  .animated-modal p {
+    transform: translateY(-50px);
+    opacity: 0;
+    
+    transition-property: transform, opacity;
+    transition-duration: .4s;
+  }
+
+  /* Final state */
+  .fancybox-slide--current .animated-modal,
+  .fancybox-slide--current .animated-modal h2,
+  .fancybox-slide--current .animated-modal p {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  /* Reveal content with different delays */
+  .fancybox-slide--current .animated-modal h2 {
+    transition-delay: .1s;
+  }
+
+  .fancybox-slide--current .animated-modal p {
+    transition-delay: .3s;
+  }
+
+
   @media screen and (min-width: 750px) {
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top }}px;
@@ -251,6 +288,16 @@
                       {% render 'icon-plus' %}
                     </button>
                   </quantity-input>
+
+                  <a data-fancybox data-src="#trueModal" data-modal="true" href="javascript:;" class="btn"> {{ "Confirm Details" }}</a>
+
+                  <div style="display: none;max-width:600px;" id="trueModal">
+                    <h2>I'm a modal!</h2>
+                    <p>You can close me only by pressing custom button below.</p>
+                    <p>It would also be possible to prevent closing using `beforeClose` callback.</p>
+                    <p><button data-fancybox-close class="btn">{{ "Close me" }}</button></p>
+                  </div>
+
                   <div class="quantity__rules caption no-js-hidden">
                     {%- if product.selected_or_first_available_variant.quantity_rule.increment > 1 -%}
                       <span class="divider">
