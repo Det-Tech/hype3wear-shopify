@@ -21,7 +21,7 @@ const SlimNotifierJs = {
             marin: '5px 5px 0 0'
         },
         notification: {
-            width: '450px',
+            width: '400px',
             iconWidth: '50px',
             maxWidth: '45vw',
             minHeight: '50px',
