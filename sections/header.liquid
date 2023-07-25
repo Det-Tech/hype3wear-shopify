@@ -799,7 +799,7 @@
       }
     };
 
-    walletConnectButton() {
+    walletConnectButtonClick() {
       this.getProvider().then(provider => {
         console.log('key', provider.publicKey.toString())
       })
