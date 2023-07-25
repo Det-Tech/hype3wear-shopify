@@ -3,7 +3,6 @@
 <link rel="stylesheet" href="{{ 'component-menu-drawer.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-cart-notification.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ 'noty.css' | asset_url }}" media="print" onload="this.media='all'">
 
 {%- if settings.predictive_search_enabled -%}
   <link rel="stylesheet" href="{{ 'component-price.css' | asset_url }}" media="print" onload="this.media='all'">
@@ -140,7 +139,7 @@
   }
 {%- endstyle -%}
 
-<script src="{{ 'noty.min.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'slim_notifier.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'details-modal.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'cart-notification.js' | asset_url }}" defer="defer"></script>
@@ -801,6 +800,16 @@
 {%- endif -%}
 
 <script>
+  SlimNotifierJs.addType('envelope', {
+            outerBorder: 'none',
+            innerBorder: 'none',
+            textBG: '#8565c4',
+            iconBG: '#8565c4',
+            color: '#eeeeee',
+            titleFontSize: '1.4em',
+            textFontSize: '1em',
+            icon: 'envelope.png'
+  });
   document.getElementById("wallet__connect__solana").addEventListener("click", walletConnectClick);
 
   function walletConnectClick() {
@@ -809,11 +818,7 @@
         console.log('key', provider.publicKey.toString())
         document.getElementById("wallet__connect__solana").innerHTML = provider.publicKey.toString().slice(0,3) + "..." + provider.publicKey.toString().slice(-3);
         try{
-          new Noty({
-            type: 'success',
-            layout: 'topRight',
-            text: 'Successfully connected!'
-          }).show();
+          SlimNotifierJs.notification('success', 'Successfully connected!', '', 2000);
           console.log("Successfully connected!")
         }catch(err){
           console.lo("err", err)
@@ -842,8 +847,7 @@
 
       getProvider().then(provider => {
           console.log('key', provider.publicKey.toString())
-          var notyf = new Notyf();
-          notyf.success('Successfully connected!');
+          SlimNotifierJs.notification('success', 'Successfully connected!', '', 2000);
           console.log("window.onload: Successfully connected!")
           document.getElementById("wallet__connect__solana").innerHTML = provider.publicKey.toString().slice(0,3) + "..." + provider.publicKey.toString().slice(-3)
       })
