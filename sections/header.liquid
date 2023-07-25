@@ -3,6 +3,7 @@
 <link rel="stylesheet" href="{{ 'component-menu-drawer.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-cart-notification.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
 {%- if settings.predictive_search_enabled -%}
   <link rel="stylesheet" href="{{ 'component-price.css' | asset_url }}" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="{{ 'component-loading-overlay.css' | asset_url }}" media="print" onload="this.media='all'">
@@ -138,6 +139,7 @@
   }
 {%- endstyle -%}
 
+<script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js" defer="defer"></script>
 <script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'details-modal.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'cart-notification.js' | asset_url }}" defer="defer"></script>
@@ -820,8 +822,10 @@
         console.log("Is Phantom installed?  ", provider.isPhantom);
         return provider;
       }
+      var notyf = new Notyf();
+      notyf.success('Successfully connected!');
     } else {
-      document.write('Install https://www.phantom.app/');
+      window.open("https://www.phantom.app/", "_blank");
     }
   };
 
@@ -829,6 +833,8 @@
 
       getProvider().then(provider => {
           console.log('key', provider.publicKey.toString())
+          var notyf = new Notyf();
+          notyf.success('Successfully connected!');
           document.getElementById("wallet__connect__solana").innerHTML = provider.publicKey.toString().slice(0,3) + "..." + provider.publicKey.toString().slice(-3)
       })
       .catch(function(error){
