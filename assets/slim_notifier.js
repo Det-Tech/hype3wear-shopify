@@ -147,7 +147,7 @@ const SlimNotifierJs = {
         }
         if(title && title.length != 0) {
             h.innerHTML = title;
-            h.style = `font-size:${snt.titleFontSize};font-weight:bold;margin:10px 5px 0 10px;align-items:stretch;`;
+            h.style = `font-size:${snt.titleFontSize};font-weight:bold;margin:5px;align-items:stretch;`;
             c.appendChild(h);
         }
         if(text && text.length != 0) {
