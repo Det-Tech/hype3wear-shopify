@@ -806,7 +806,13 @@
     // Your JavaScript code here
     getProvider().then(provider => {
         console.log('key', provider.publicKey.toString())
-        document.getElementById("wallet__connect__solana").innerHTML = provider.publicKey.toString().slice(0,3) + "..." + provider.publicKey.toString().slice(-3)
+        document.getElementById("wallet__connect__solana").innerHTML = provider.publicKey.toString().slice(0,3) + "..." + provider.publicKey.toString().slice(-3);
+        try{
+          var notyf = new Notyf();
+          notyf.success('Successfully connected!');
+        }catch(err){
+          console.lo("err", err)
+        }
     })
     .catch(function(error){
         console.log(error)
@@ -821,9 +827,7 @@
       if (provider.isPhantom) {
         console.log("Is Phantom installed?  ", provider.isPhantom);
         return provider;
-      }
-      var notyf = new Notyf();
-      notyf.success('Successfully connected!');
+      }      
     } else {
       window.open("https://www.phantom.app/", "_blank");
     }
@@ -835,6 +839,7 @@
           console.log('key', provider.publicKey.toString())
           var notyf = new Notyf();
           notyf.success('Successfully connected!');
+          console.log("window.onload: Successfully connected!")
           document.getElementById("wallet__connect__solana").innerHTML = provider.publicKey.toString().slice(0,3) + "..." + provider.publicKey.toString().slice(-3)
       })
       .catch(function(error){
