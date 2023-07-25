@@ -778,7 +778,7 @@
 <script>
   document.getElementById("wallet__connect__solana").addEventListener("click", walletConnectClick);
 
-  const walletConnectClick = () => {
+  function walletConnectClick() {
     // Your JavaScript code here
     console.log("here")
     getProvider().then(provider => {
@@ -789,7 +789,7 @@
     });
   }
 
-  const getProvider = async () => {
+  async function getProvider() {
     if ("solana" in window) {
       await window.solana.connect(); // opens wallet to connect to
 
