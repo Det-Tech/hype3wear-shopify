@@ -527,7 +527,7 @@
               </li>
             {%- endfor -%}
             <li>
-              <div id="wallet__connect__solana" class="header__menu-item list-menu__item link link--text focus-inset" >
+              <div id="wallet__connect__solan" class="header__menu-item list-menu__item link link--text focus-inset" >
                 {{ "Wallet Connect" }}
               </div>
             </li>
@@ -775,15 +775,24 @@
   {%- render 'cart-notification', color_scheme: section.settings.color_scheme, desktop_menu_type: section.settings.menu_type_desktop -%}
 {%- endif -%}
 
+<script>
+  document.getElementById("wallet__connect__solan").addEventListener("click", myFunction);
+
+  function myFunction() {
+    // Your JavaScript code here
+    alert("Button clicked!");
+  }
+</script>
+
 {% javascript %}
   class StickyHeader extends HTMLElement {
     constructor() {
       super();
 
-      this.walletConnectButton = this.getElementById('wallet__connect__solana');
-      this.walletConnectButton.addEventListener('click', () =>{
-        alert();
-      });
+      // this.walletConnectButton = this.getElementById('wallet__connect__solana');
+      // this.walletConnectButton.addEventListener('click', () =>{
+      //   alert();
+      // });
 
     }
 
