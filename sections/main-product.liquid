@@ -256,6 +256,14 @@
                     {{ "test2" }}
                   </button>
                 </quantity-input>
+                <a data-fancybox data-src="#trueModal" data-modal="true" href="javascript:;" class="btn"> {{ "Confirm Details" }}</a>
+
+                <div style="display: none;max-width:600px;" id="trueModal">
+                  <h2> {{ "I'm a modal!" }}</h2>
+                  <p>You can close me only by pressing custom button below.</p>
+                  <p>It would also be possible to prevent closing using `beforeClose` callback.</p>
+                  <p><button data-fancybox-close class="btn">{{ "Close me" }}</button></p>
+                </div>
                 <div class="quantity__rules caption no-js-hidden">
                   {%- if product.selected_or_first_available_variant.quantity_rule.increment > 1 -%}
                     <span class="divider">
