@@ -527,7 +527,7 @@
               </li>
             {%- endfor -%}
             <li>
-              <div id="wallet__connect_solana" class="header__menu-item list-menu__item link link--text focus-inset" >
+              <div id="wallet__connect__solana" class="header__menu-item list-menu__item link link--text focus-inset" >
                 {{ "Wallet Connect" }}
               </div>
             </li>
@@ -780,8 +780,10 @@
     constructor() {
       super();
 
-      this.walletConnectButton = this.getElementById('wallet__connect_solana');
-      this.walletConnectButton.addEventListener('click', this.walletConnectButtonClick.bind(this));
+      this.walletConnectButton = this.getElementById('wallet__connect__solana');
+      this.walletConnectButton.addEventListener('click', () =>{
+        alert();
+      });
 
     }
 
