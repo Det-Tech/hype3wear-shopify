@@ -77,7 +77,7 @@
       opacity: 1;
     }
 
-    .popup {
+    .popup-confirm {
       margin: 70px auto;
       padding: 20px;
       background: #fff;
@@ -87,12 +87,12 @@
       transition: all 5s ease-in-out;
     }
 
-    .popup h2 {
+    .popup-confirm h2 {
       margin-top: 0;
       color: #333;
       font-family: Tahoma, Arial, sans-serif;
     }
-    .popup .close {
+    .popup-confirm .close {
       position: absolute;
       top: 20px;
       right: 30px;
@@ -102,10 +102,10 @@
       text-decoration: none;
       color: #333;
     }
-    .popup .close:hover {
+    .popup-confirm .close:hover {
       color: #06D85F;
     }
-    .popup .content {
+    .popup-confirm .content {
       max-height: 30%;
       overflow: auto;
     }
@@ -360,7 +360,7 @@
 
                 <div id="confirm" class="overlay">
                   {{""}}
-                  <div class="popup">
+                  <div class="popup-confirm">
                     <a class="close" href="#">&times;</a>
                     <div class="content">
                       Thank to pop me out of that button, but now i'm done so you can close this window.
