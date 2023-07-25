@@ -120,6 +120,14 @@
       overflow: auto;
     }
 
+    .effect-16{border: 0; padding: 4px 0; border-bottom: 1px solid #ccc; background-color: transparent;}
+
+    .effect-16 ~ .focus-border{position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background-color: #4caf50; transition: 0.4s;}
+    .effect-16:focus ~ .focus-border,
+    .has-content.effect-16 ~ .focus-border{width: 100%; transition: 0.4s;}
+    .effect-16 ~ label{position: absolute; left: 0; width: 100%; top: 9px; color: #aaa; transition: 0.3s; z-index: -1; letter-spacing: 0.5px;}
+    .effect-16:focus ~ label, .has-content.effect-16 ~ label{top: -16px; font-size: 12px; color: #4caf50; transition: 0.3s;}
+
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
       padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
@@ -374,6 +382,10 @@
                     <h2> {{ "Confirm Details" }}</h2>
                     <a class="close" href="#">&times;</a>
                     <div class="content">
+                      <input class="effect-16" type="text" placeholder="">
+                      <label>First Name</label>
+
+                      <span class="focus-border"></span>
                       <span> {{ "Your Name:" }} </span> <input type="text" id="confirm-name"/>
                       <span> {{ "Your Address:" }} </span> <input type="text" id="confirm-address"/>
                       <button> {{ "Submit"}}</button>
