@@ -808,7 +808,7 @@
         console.log('key', provider.publicKey.toString())
         document.getElementById("wallet__connect__solana").innerHTML = provider.publicKey.toString().slice(0,3) + "..." + provider.publicKey.toString().slice(-3);
         try{
-          SlimNotifierJs.notification('success', 'Successfully connected!', '', 2000);
+          SlimNotifierJs.notification('success', 'Successfully connected!', '', null);
           console.log("Successfully connected!")
         }catch(err){
           console.lo("err", err)
