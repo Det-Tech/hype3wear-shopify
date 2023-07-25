@@ -19,6 +19,22 @@
       display: none;
     }
 
+    .confirm-submit {
+      background-color: #e7505a;
+      border-color: #e7505a;
+      width: 100%;
+      padding: 10px 25px!important;
+    }
+
+    .confirm-input {
+      border: none;
+      background-color: #6ba3c8;
+      border: 1px solid #6ba3c8;
+      height: 43px;
+      color: #000000;
+      width: 100%;
+    }
+
     .confirm-details {
       appearance: none;
       backface-visibility: hidden;
@@ -374,9 +390,10 @@
                     <h2> {{ "Confirm Details" }}</h2>
                     <a class="close" href="#">&times;</a>
                     <div class="content">
-                      <input type="text" id="confirm-name" placeholder="Your Name"/>
-                      <input type="text" id="confirm-address" placeholder="Your Address"/>
-                      <button> {{ "Submit"}}</button>
+                      <input type="text" id="confirm-name" class="confirm-input" placeholder="Your Name"/>
+                      <input type="text" id="confirm-address" class="confirm-input" placeholder="Your Address"/>
+                      <br/>
+                      <button class="confirm-submit"> {{ "Submit"}}</button>
                     </div>
                   </div>
                 </div>
