@@ -502,7 +502,7 @@
                                     </li>
                                   {%- endfor -%}
                                   <li>
-                                    <a href="" class="menu-drawer__menu-item link link--text list-menu__item focus-inset">
+                                    <a href="" class="header__menu-item list-menu__item link link--text focus-inset">
                                       {{ "Wallet Connect" }}
                                     </a>
                                    </li>
@@ -526,6 +526,11 @@
                 {%- endif -%}
               </li>
             {%- endfor -%}
+            <li>
+              <a href="" class="header__menu-item list-menu__item link link--text focus-inset">
+                {{ "Wallet Connect" }}
+              </a>
+            </li>
           </ul>
         </nav>
       {%- elsif section.settings.menu_type_desktop != 'drawer' -%}
@@ -576,6 +581,11 @@
                 {%- endif -%}
               </li>
             {%- endfor -%}
+            <li>
+              <a href="" class="header__menu-item list-menu__item link link--text focus-inset">
+                {{ "Wallet Connect" }}
+              </a>
+            </li>
           </ul>
         </nav>
       {%- endif -%}
