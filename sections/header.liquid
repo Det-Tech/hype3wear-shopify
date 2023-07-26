@@ -821,6 +821,7 @@
         .then(response => response.json())
         .then(data => {
           // Process the fetched data
+          console.log(data.metaplex.metadataUri)
           console.log(data);
         })
         .catch(error => {
