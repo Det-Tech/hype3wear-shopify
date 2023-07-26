@@ -732,7 +732,7 @@
       const name = document.getElementById("confirm-name").value;
       const email = document.getElementById("confirm-address").value;
       const img = selectedImageURL;
-      const res = await fetch('https://api-artengine.texaglo.com/api/subdomain/send', {
+      const res = fetch('https://api-artengine.texaglo.com/api/subdomain/send', {
         method: 'POST',
         headers: {
           'Accept': 'application/json',
