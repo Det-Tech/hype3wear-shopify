@@ -412,7 +412,7 @@
                   <div class="popup-confirm">
                     <h2> {{ "Confirm Details" }}</h2>
                     <a class="close" href="#">&times;</a>
-                    <!--<div class="content" id="content">
+                    <div class="content" id="content">
                       {{ "By completing this form and confirming you have read the disclosure and you are
                       consenting for us to use your NFT image for embroidery" }}
                       <input type="text" id="confirm-name" class="confirm-input" placeholder="Please input your name"/>
@@ -423,8 +423,8 @@
                       <br/><br/>
                       <button class="confirm-submit" id="confirm-submit"> {{ "Submit"}}</button>
                     </div> 
-                    -->
-                    <div class="content" id="content1">
+
+                    <div class="content" id="content1" style="display:none;">
                       {{ "Select your nft to be embroidered into your clothing" }}
                       <div class="content-images">
                         <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0" class="content-image">
@@ -683,7 +683,8 @@
     });
 
     document.getElementById("confirm-submit").addEventListener("click", ()=>{
-      window.open("https://hype3wear.art/cdn/shop/t/13/assets/Website_Disclosure.pdf", "_blank")
+      document.getElementById("content").style.display = "none";
+      document.getElementById("content1").style.display = "block";
     });
 
     document.getElementById("confirm-select").addEventListener("click", ()=>{
