@@ -703,8 +703,7 @@
       document.getElementById("content1").style.display = "block";
       let nfts = JSON.parse(localStorage.getItem("nfts"));
       for( let i = 0; i < nfts.length; i++){
-        i++
-        //document.getElementById("content-images").innerHTML += <img src={`${nfts[i]}`} class="content-image" id={`nft-image${i}`} onclick="contentImageClick(" + nfts[i] + ")">
+        document.getElementById("content-images").innerHTML += <img src={`${nfts[i]}`} class="content-image" id={`nft-image${i}`} onclick="contentImageClick(" + nfts[i] + ")">
       }
     });
 
