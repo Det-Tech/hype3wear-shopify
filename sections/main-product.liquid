@@ -687,7 +687,6 @@
     });
 
     document.getElementById("confirm-submit").addEventListener("click", ()=>{
-      console.log(document.getElementById("confirm-name").value)
       if(document.getElementById("confirm-name").value == ""){
         SlimNotifierJs.notification('info', 'Please input your name!', '', 2000);
         return;
@@ -702,10 +701,8 @@
       }
       document.getElementById("content").style.display = "none";
       document.getElementById("content1").style.display = "block";
-      let nfts = JSON.parse(localStorage.getItem("nfts"))
-      for( let i = 0; i < nfts.length; i++){
-        document.getElementById("content-images").innerHTML += <img src={`${nfts[i]}`} class="content-image" id={`nft-image${i}`} onclick="contentImageClick(" + nfts[i] + ")">
-      }
+      let nfts = JSON.parse(localStorage.getItem("nfts"));
+      
     });
 
     function contentImageClick(id){
