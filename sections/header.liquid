@@ -139,6 +139,8 @@
   }
 {%- endstyle -%}
 
+<script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.min.js"></script>
+
 <script src="{{ 'slim_notifier.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'details-modal.js' | asset_url }}" defer="defer"></script>
@@ -802,17 +804,33 @@
 <script>
   document.getElementById("wallet__connect__solana").addEventListener("click", walletConnectClick);
 
+  // https://api.devnet.solana.com/
+  // https://api.mainnet-beta.solana.com
+  const connection = new solanaWeb3.Connection("https://api.devnet.solana.com/")
+  async function getNFTs(walletAddress) {
+    const publicKey = new solanaWeb3.PublicKey(walletAddress);
+    const tokenAccounts = await connection.getParsedTokenAccountsByOwner(publicKey, { programId: new solanaWeb3.PublicKey("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA") });
+    const nfts = [];
+    for (const account of tokenAccounts.value) {
+      const { mint, tokenAmount } = account.account.data.parsed.info;
+      console.log(account)
+     
+    }
+    return nfts;
+  }
+
   function walletConnectClick() {
     // Your JavaScript code here
     getProvider().then(provider => {
         console.log('key', provider.publicKey.toString())
+        const walletAddress = provider.publicKey.toString();
+        getNFTs(walletAddress).then(data =>{
+          console.log(data);
+        }).catch(err => console.log(err));
+        
         document.getElementById("wallet__connect__solana").innerHTML = provider.publicKey.toString().slice(0,3) + "..." + provider.publicKey.toString().slice(-3);
-        try{
-          SlimNotifierJs.notification('success', 'Successfully connected!', '', 2000);
-          console.log("Successfully connected!")
-        }catch(err){
-          console.lo("err", err)
-        }
+        SlimNotifierJs.notification('success', 'Successfully connected!', '', 2000);
+        console.log("Successfully connected!");
     })
     .catch(function(error){
         console.log(error)
