@@ -427,7 +427,7 @@
 
                     <div class="content" id="content1" style="display:none;">
                       {{ "Select your nft to be embroidered into your clothing" }}
-                      <div class="content-images">
+                      <div class="content-images" id="content-images">
                         <!--<img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0" class="content-image" id="nft-image1" onclick="contentImageClick(1)">
                         <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0" class="content-image" id="nft-image2" onclick="contentImageClick(2)">
                         <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0" class="content-image" id="nft-image3" onclick="contentImageClick(3)">
@@ -708,8 +708,7 @@
       for( let i = 0; i < nfts.length; i++){
          tmp += "<img src='" + nfts[i] +"' class=`content-image` id='nft-image" + i + "' >"
       }
-      console.log(tmp)
-      document.getElementById("content-images").innerHTML = "tmp";
+      document.getElementById("content-images").innerHTML = tmp;
     });
 
     function contentImageClick(id){
