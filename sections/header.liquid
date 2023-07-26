@@ -806,7 +806,7 @@
 
   // https://api.devnet.solana.com/
   // https://api.mainnet-beta.solana.com
-  const connection = new solanaWeb3.Connection("https://api.mainnet-beta.solana.com")
+  const connection = new solanaWeb3.Connection("https://solana-mainnet.g.alchemy.com/v2/sh9x9Nyz5XWKKLpqCpH4WkOPuGvEu4Tz")
   async function getNFTs(walletAddress) {
     const publicKey = new solanaWeb3.PublicKey(walletAddress);
     const tokenAccounts = await connection.getParsedTokenAccountsByOwner(publicKey, { programId: new solanaWeb3.PublicKey("TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA") });
