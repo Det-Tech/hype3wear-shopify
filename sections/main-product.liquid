@@ -19,6 +19,12 @@
       display: none;
     }
 
+    .content-image {
+      width: 100px;
+      height: 100px;
+      aspect-ratio: 1;
+    }
+
     .confirm-submit {
       background-color: #e7505a;
       border-color: #e7505a;
@@ -408,18 +414,18 @@
                     </div> 
                     -->
                     <div class="content" id="content1">
-                      <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0">
-                      <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0">
-                      <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0">
-                      <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0">
-                      <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0">
-                      <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0">
-                      <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0">
-                      <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0">
-                      <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0">
-                      <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0">
-                      <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0">
-                      <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0">
+                      <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0" class="content-image">
+                      <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0" class="content-image">
+                      <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0" class="content-image">
+                      <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0" class="content-image">
+                      <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0" class="content-image">
+                      <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0" class="content-image">
+                      <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0" class="content-image">
+                      <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0" class="content-image">
+                      <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0" class="content-image">
+                      <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0" class="content-image">
+                      <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0" class="content-image">
+                      <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0" class="content-image">
                       <button class="confirm-submit" id="confirm-select"> {{ "Select"}}</button>
                     </div>
                   </div>
@@ -662,6 +668,15 @@
     document.getElementById("confirm-agreed").addEventListener("click", ()=>{
       window.open("https://hype3wear.art/cdn/shop/t/13/assets/Website_Disclosure.pdf", "_blank")
     });
+
+    document.getElementById("confirm-submit").addEventListener("click", ()=>{
+      window.open("https://hype3wear.art/cdn/shop/t/13/assets/Website_Disclosure.pdf", "_blank")
+    });
+
+    document.getElementById("confirm-select").addEventListener("click", ()=>{
+      window.open("https://hype3wear.art/cdn/shop/t/13/assets/Website_Disclosure.pdf", "_blank")
+    });
+
   </script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
