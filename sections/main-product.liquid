@@ -688,8 +688,15 @@
       document.getElementById("content1").style.display = "block";
     });
 
+    var selectedImageId = null;
+
     function contentImageClick(id){
       console.log("hey")
+      if(selectedImageId != null){
+        document.getElementById(`nft-image${selectedImageId}`).style.border = "none";
+      }
+      selectedImageId = id;
+      document.getElementById(`nft-image${id}`).style.border = "5px solid #cf2222";
       console.log(document.getElementById(`nft-image${id}`).src)
       document.getElementById("confirm-select").innerText = "Confirm";
     };
