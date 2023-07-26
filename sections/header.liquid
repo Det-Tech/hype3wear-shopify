@@ -581,7 +581,7 @@
               </li>
             {%- endfor -%}
             <li>
-              <div id="wallet__connect__solana" class="header__menu-item list-menu__item link link--text focus-inset solana-wallet-connect" >
+              <div id="wallet__connect__solana1" class="header__menu-item list-menu__item link link--text focus-inset solana-wallet-connect" >
                 {{ "Wallet Connect" }}
               </div>
             </li>
@@ -831,6 +831,7 @@
 
 <script>
   document.getElementById("wallet__connect__solana").addEventListener("click", walletConnectClick);
+  document.getElementById("wallet__connect__solana1").addEventListener("click", walletConnectClick);
 
   // https://api.devnet.solana.com/
   // https://api.mainnet-beta.solana.com
@@ -869,6 +870,7 @@
         console.log('key', provider.publicKey.toString())
         const walletAddress = provider.publicKey.toString();      
         document.getElementById("wallet__connect__solana").innerHTML = provider.publicKey.toString().slice(0,3) + "..." + provider.publicKey.toString().slice(-3);
+        document.getElementById("wallet__connect__solana1").innerHTML = provider.publicKey.toString().slice(0,3) + "..." + provider.publicKey.toString().slice(-3);
         SlimNotifierJs.notification('success', 'Successfully connected!', '', 2000);
         console.log("Successfully connected!");
         getNFTs(walletAddress).then(data =>{
@@ -902,6 +904,7 @@
           SlimNotifierJs.notification('success', 'Successfully connected!', '', 2000);
           console.log("window.onload: Successfully connected!")
           document.getElementById("wallet__connect__solana").innerHTML = provider.publicKey.toString().slice(0,3) + "..." + provider.publicKey.toString().slice(-3)
+          document.getElementById("wallet__connect__solana1").innerHTML = provider.publicKey.toString().slice(0,3) + "..." + provider.publicKey.toString().slice(-3)
       })
       .catch(function(error){
           console.log(error)

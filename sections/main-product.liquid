@@ -420,7 +420,7 @@
                       <br/><br/>
                       <input type="text" id="confirm-address" class="confirm-input" placeholder="Please input your address"/>
                       <br/><br/>
-                      <input type="checkbox" id="confirm-agreed" /> Disclosure link
+                      <input type="checkbox" id="confirm-agreed" /> <span id="confirm-agreed-link"> Disclosure link </span>
                       <br/><br/>
                       <button class="confirm-submit" id="confirm-submit"> {{ "Submit"}}</button>
                     </div> 
@@ -673,7 +673,7 @@
   <script>
     var selectedImageId = null, selectedImageURL;
 
-    document.getElementById("confirm-agreed").addEventListener("click", ()=>{
+    document.getElementById("confirm-agreed-link").addEventListener("click", ()=>{
       window.open("https://hype3wear.art/cdn/shop/t/13/assets/Website_Disclosure.pdf", "_blank")
     });
 
