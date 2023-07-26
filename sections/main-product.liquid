@@ -722,7 +722,7 @@
     };
 
     document.getElementById("confirm-select").addEventListener("click", ()=>{
-      if(selectedImageId != null){
+      if(selectedImageId == null){
         SlimNotifierJs.notification('info', 'Please select!', '', 2000);
         return;
       }
