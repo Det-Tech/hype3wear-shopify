@@ -819,7 +819,7 @@
         headers: config
       })
         .then(response => response.json())
-        .then(data => {
+        .then(async(data) => {
           // Process the fetched data
           console.log(data.metaplex.metadataUri)
           await fetch(data.metaplex.metadataUri).then(res => res.json())
