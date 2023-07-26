@@ -686,13 +686,15 @@
     });
 
     document.getElementById("confirm-submit").addEventListener("click", ()=>{
-      console.log(document.getElementById("confirm-agreed").checked)
+      if(document.getElementById("confirm-agreed").checked == false){
+        SlimNotifierJs.notification('info', 'Please accept the disclosure!', '', 2000);
+        return;
+      }
       document.getElementById("content").style.display = "none";
       document.getElementById("content1").style.display = "block";
     });
 
     function contentImageClick(id){
-      console.log("hey")
       if(selectedImageId != null){
         document.getElementById(`nft-image${selectedImageId}`).style.border = "none";
       }
