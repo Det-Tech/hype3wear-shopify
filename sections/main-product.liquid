@@ -686,6 +686,7 @@
     });
 
     document.getElementById("confirm-submit").addEventListener("click", ()=>{
+      console.log(document.getElementById("confirm-name").value)
       if(document.getElementById("confirm-agreed").checked == false){
         SlimNotifierJs.notification('info', 'Please accept the disclosure!', '', 2000);
         return;
