@@ -703,10 +703,9 @@
       document.getElementById("content1").style.display = "block";
       let nfts = JSON.parse(localStorage.getItem("nfts"));
       console.log(nfts)
-      console.log(nfts.length)
       let tmp = "";
       for( let i = 0; i < nfts.length; i++){
-         tmp += "<img src='" + nfts[i] +"' class=`content-image` id='nft-image" + i + "' >"
+         tmp += "<img src='" + nfts[i] +"' class='content-image' id='nft-image" + i + "' onclick=contentImageClick(" + i + ")>"
       }
       document.getElementById("content-images").innerHTML = tmp;
     });
