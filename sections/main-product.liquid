@@ -427,18 +427,18 @@
                     <div class="content" id="content1" style="display:none;">
                       {{ "Select your nft to be embroidered into your clothing" }}
                       <div class="content-images">
-                        <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0" class="content-image">
-                        <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0" class="content-image">
-                        <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0" class="content-image">
-                        <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0" class="content-image">
-                        <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0" class="content-image">
-                        <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0" class="content-image">
-                        <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0" class="content-image">
-                        <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0" class="content-image">
-                        <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0" class="content-image">
-                        <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0" class="content-image">
-                        <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0" class="content-image">
-                        <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0" class="content-image">
+                        <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0" class="content-image" id="nft-image">
+                        <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0" class="content-image" id="nft-image">
+                        <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0" class="content-image" id="nft-image">
+                        <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0" class="content-image" id="nft-image">
+                        <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0" class="content-image" id="nft-image">
+                        <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0" class="content-image" id="nft-image">
+                        <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0" class="content-image" id="nft-image">
+                        <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0" class="content-image" id="nft-image">
+                        <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0" class="content-image" id="nft-image">
+                        <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0" class="content-image" id="nft-image">
+                        <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0" class="content-image" id="nft-image">
+                        <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0" class="content-image" id="nft-image">
                       </div>                       
                       <button class="confirm-submit" id="confirm-select"> {{ "Select"}}</button>
                   </div>
@@ -685,6 +685,11 @@
     document.getElementById("confirm-submit").addEventListener("click", ()=>{
       document.getElementById("content").style.display = "none";
       document.getElementById("content1").style.display = "block";
+    });
+
+    document.getElementById("nft-image").addEventListener("click", ()=>{
+      console.log(document.getElementById("nft-image").src)
+      document.getElementById("confirm-select").innerText = "Confirm";
     });
 
     document.getElementById("confirm-select").addEventListener("click", ()=>{
