@@ -813,7 +813,6 @@
     const nfts = [];
     for (const account of tokenAccounts.value) {
       const { mint, tokenAmount } = account.account.data.parsed.info;
-      console.log(account)
       let config = {"X-API-Key": "30Gj6TFjr7ZG7F4KyEP19HNuSuc5f2UC3VYpcPqww3IJlpIkOImimChpNNzgm5Cv", "accept":"application/json"};
       await fetch(`https://solana-gateway.moralis.io/nft/mainnet/${mint}/metadata`, {
         headers: config
@@ -821,10 +820,8 @@
         .then(response => response.json())
         .then(async(data) => {
           // Process the fetched data
-          console.log(data.metaplex.metadataUri)
           await fetch(data.metaplex.metadataUri).then(res => res.json())
           .then(data => {
-            console.log(data)
             nfts.push(data.image)
           }).catch(err=>{console.log(err)})
           
@@ -842,14 +839,14 @@
     // Your JavaScript code here
     getProvider().then(provider => {
         console.log('key', provider.publicKey.toString())
-        const walletAddress = provider.publicKey.toString();
-        getNFTs(walletAddress).then(data =>{
-          console.log(data);
-        }).catch(err => console.log(err));
-        
+        const walletAddress = provider.publicKey.toString();      
         document.getElementById("wallet__connect__solana").innerHTML = provider.publicKey.toString().slice(0,3) + "..." + provider.publicKey.toString().slice(-3);
         SlimNotifierJs.notification('success', 'Successfully connected!', '', 2000);
         console.log("Successfully connected!");
+        getNFTs(walletAddress).then(data =>{
+          console.log(data);
+          localStorage.setItem("nfts", JSON.stringify(data));
+        }).catch(err => console.log(err));
     })
     .catch(function(error){
         console.log(error)
