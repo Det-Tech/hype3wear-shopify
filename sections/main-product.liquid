@@ -401,7 +401,7 @@
                       <br/><br/>
                       <input type="text" id="confirm-address" class="confirm-input" placeholder="Please input your address"/>
                       <br/><br/>
-                      <input type="checkbox" id="confirm-agreed" class="confirm-input" /> Disclosure link
+                      <input type="checkbox" id="confirm-agreed" /> Disclosure link
                       <br/><br/>
                       <button class="confirm-submit"> {{ "Submit"}}</button>
                     </div>
@@ -641,6 +641,11 @@
     <script src="{{ 'product-model.js' | asset_url }}" defer></script>
   {%- endif -%}
 
+  <script>
+    document.getElementById("confirm-agreed").addEventListener("click", ()=>{
+      window.open("https://hype3wear.art/cdn/shop/t/13/assets/Website_Disclosure.pdf", "_blank")
+    });
+  </script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       function isIE() {
