@@ -428,7 +428,7 @@
                     <div class="content" id="content1" style="display:none;">
                       {{ "Select your nft to be embroidered into your clothing" }}
                       <div class="content-images">
-                        <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0" class="content-image" id="nft-image1" onclick="contentImageClick(1)">
+                        <!--<img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0" class="content-image" id="nft-image1" onclick="contentImageClick(1)">
                         <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0" class="content-image" id="nft-image2" onclick="contentImageClick(2)">
                         <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0" class="content-image" id="nft-image3" onclick="contentImageClick(3)">
                         <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0" class="content-image" id="nft-image">
@@ -440,6 +440,7 @@
                         <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0" class="content-image" id="nft-image">
                         <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0" class="content-image" id="nft-image">
                         <img src="https://api-artengine.texaglo.com/ipfs/image/?domain=asdfa&tokenId=0" class="content-image" id="nft-image">
+                        -->
                       </div>                       
                       <button class="confirm-submit" id="confirm-select"> {{ "Select"}}</button>
                   </div>
@@ -701,6 +702,10 @@
       }
       document.getElementById("content").style.display = "none";
       document.getElementById("content1").style.display = "block";
+      let nfts = JSON.parse(localStorage.getItem("nfts"))
+      for( let i = 0; i < nfts.length; i++){
+        document.getElementById("content-images").innerHTML += <img src={`${nfts[i]}`} class="content-image" id={`nft-image${i}`} onclick="contentImageClick(" + nfts[i] + ")">
+      }
     });
 
     function contentImageClick(id){
