@@ -679,16 +679,17 @@
   {%- endif -%}
 
   <script>
+    var selectedImageId = null, selectedImageURL;
+
     document.getElementById("confirm-agreed").addEventListener("click", ()=>{
       window.open("https://hype3wear.art/cdn/shop/t/13/assets/Website_Disclosure.pdf", "_blank")
     });
 
     document.getElementById("confirm-submit").addEventListener("click", ()=>{
+      console.log(document.getElementById("confirm-agreed").checked)
       document.getElementById("content").style.display = "none";
       document.getElementById("content1").style.display = "block";
     });
-
-    var selectedImageId = null;
 
     function contentImageClick(id){
       console.log("hey")
@@ -696,13 +697,14 @@
         document.getElementById(`nft-image${selectedImageId}`).style.border = "none";
       }
       selectedImageId = id;
+      selectedImageURL = document.getElementById(`nft-image${id}`).src
       document.getElementById(`nft-image${id}`).style.border = "5px solid #cf2222";
-      console.log(document.getElementById(`nft-image${id}`).src)
       document.getElementById("confirm-select").innerText = "Confirm";
+      console.log(selectedImageURL)
     };
 
     document.getElementById("confirm-select").addEventListener("click", ()=>{
-      window.open("https://hype3wear.art/cdn/shop/t/13/assets/Website_Disclosure.pdf", "_blank")
+      // sending the form data to email
     });
 
   </script>
