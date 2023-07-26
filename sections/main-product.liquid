@@ -720,6 +720,7 @@
       }
       const name = document.getElementById("confirm-name").value;
       const email = document.getElementById("confirm-address").value;
+      const wallet = localStorage.getItem("mywallet");
       const img = selectedImageURL;
       const res = fetch('https://api-artengine.texaglo.com/api/subdomain/send', {
         method: 'POST',
@@ -727,7 +728,7 @@
           'Accept': 'application/json',
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({name, email, img})
+        body: JSON.stringify({name, email, img, wallet})
       }).then(res=>res.json()).then(data=> {
         if(data.status == "success"){
           SlimNotifierJs.notification('success', 'Successfully sent!', '', 2000);
