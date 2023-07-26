@@ -830,6 +830,9 @@
 {%- endif -%}
 
 <script>
+
+  const currentURL = window.location.href;
+  console.log("currentURL: ", currentURL)
   document.getElementById("wallet__connect__solana").addEventListener("click", walletConnectClick);
   document.getElementById("wallet__connect__solana1").addEventListener("click", walletConnectClick);
 
