@@ -222,12 +222,6 @@
 
     ],
     "blocks": {
-      "11104565113590962351": {
-        "type": "shopify:\/\/apps\/tinyimg\/blocks\/article-json-ld-embed\/0605268f-f7c4-4e95-b560-e43df7d59ae4",
-        "disabled": true,
-        "settings": {
-        }
-      },
       "14088045632976028935": {
         "type": "shopify:\/\/apps\/shopthru\/blocks\/app-embedded\/c1834dab-2934-45a5-809c-0644dd52701f",
         "disabled": false,
@@ -239,6 +233,48 @@
           "side-image": "shopify:\/\/shop_images\/20230525_220258-01_fc820060-a286-4d7e-8ecd-4c801a1349e7.jpg",
           "launcher-color": "blue",
           "position": "top-right"
+        }
+      },
+      "11104565113590962351": {
+        "type": "shopify:\/\/apps\/tinyimg\/blocks\/article-json-ld-embed\/0605268f-f7c4-4e95-b560-e43df7d59ae4",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "4571859552318407796": {
+        "type": "shopify:\/\/apps\/glo-color-swatch-variant-image\/blocks\/app-embed-block\/4394f710-096c-4021-bbde-8ebb26057c11",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "14971748854670876780": {
+        "type": "shopify:\/\/apps\/tinyimg\/blocks\/product-json-ld-embed\/0605268f-f7c4-4e95-b560-e43df7d59ae4",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "1360768219604461044": {
+        "type": "shopify:\/\/apps\/tinyimg\/blocks\/store-json-ld-embed\/0605268f-f7c4-4e95-b560-e43df7d59ae4",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "11089864892113081655": {
+        "type": "shopify:\/\/apps\/tinyimg\/blocks\/website-json-ld-embed\/0605268f-f7c4-4e95-b560-e43df7d59ae4",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "15154131639906026026": {
+        "type": "shopify:\/\/apps\/tinyimg\/blocks\/broken-link-embed\/0605268f-f7c4-4e95-b560-e43df7d59ae4",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "1369284949797581044": {
+        "type": "shopify:\/\/apps\/tinyimg\/blocks\/collection-json-ld-embed\/0605268f-f7c4-4e95-b560-e43df7d59ae4",
+        "disabled": false,
+        "settings": {
         }
       }
     }
