@@ -852,7 +852,7 @@
     const publicKey = new solanaWeb3.PublicKey(walletAddress);
 
     const xKey = "xoJ7I_N0mxawHnyM";
-    const network = "devnet";
+    const network = "mainnet";
     const tokenNFTS = await fetch(`https://api.shyft.to/sol/v1/nft/read_all?network=${network}&address=${publicKey.toString()}`, {
       headers: {
         "Content-Type": "application/json",
