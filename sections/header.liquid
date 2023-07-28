@@ -32,6 +32,11 @@
 <noscript>{{ 'component-cart-items.css' | asset_url | stylesheet_tag }}</noscript>
 
 <style>
+  @font-face {
+   font-family: Futura;
+   src: url("{{ 'Futura_Heavy_font.ttf' | asset_url }}");
+  }
+
   header-drawer {
     justify-self: start;
     margin-left: -1.2rem;
@@ -53,13 +58,13 @@
   {%- endif -%}
 
   .solana-wallet-connect {
-    background: #5E5DF0;
+    background: rgb(160, 208, 251);
     border-radius: 999px;
-    box-shadow: #5E5DF0 0 10px 20px -10px;
+    box-shadow: rgb(160, 208, 251) 0 10px 20px -10px;
     box-sizing: border-box;
     color: #FFFFFF;
     cursor: pointer;
-    font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+    font-family: Futura;
     font-size: 14px;
     font-weight: 700;
     line-height: 22px;
@@ -75,9 +80,9 @@
   }
 
   .solana-wallet-connect-drawer {
-    background: #5E5DF0;
+    background: rgb(160, 208, 251);
     border-radius: 999px;
-    box-shadow: #5E5DF0 0 10px 20px -10px;
+    box-shadow: rgb(160, 208, 251) 0 10px 20px -10px;
     box-sizing: border-box;
     color: #FFFFFF;
     cursor: pointer;
@@ -282,7 +287,7 @@
                     {%- endfor -%}
                     <li>
                       <div id="wallet__connect__solana" class="menu-drawer__menu-item list-menu__item link link--text focus-inset solana-wallet-connect-drawer" >
-                        {{ "Wallet Connect" }}
+                        {{ "Connect Wallet" }}
                       </div>
                     </li>
                   </ul>
@@ -582,7 +587,7 @@
             {%- endfor -%}
             <li>
               <div id="wallet__connect__solana1" class="header__menu-item list-menu__item link link--text focus-inset solana-wallet-connect" >
-                {{ "Wallet Connect" }}
+                {{ "Connect Wallet" }}
               </div>
             </li>
           </ul>
