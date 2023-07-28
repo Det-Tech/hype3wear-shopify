@@ -419,7 +419,7 @@
                   {{""}}
                   <div class="popup-confirm">
                     <h2> {{ "Add Digital Asset" }}</h2>
-                    <a class="close" href="#">&times;</a>
+                    <a class="close" id="confirm-close" href="#">&times;</a>
                     <div class="content" id="content">
                       {{ "By completing this form and confirming you have read the disclosure and you are
                       consenting for us to use your NFT image for embroidery" }}
@@ -686,6 +686,7 @@
 
     document.getElementById("confirm-submit").addEventListener("click", ()=>{
       window.location.href = "https://hype3wear.art/products/custom-pfp-embroidery";
+      document.getElementById('confirm-close').click();
       if(document.getElementById("confirm-name").value == ""){
         SlimNotifierJs.notification('info', 'Please input your name!', '', 2000);
         return;
