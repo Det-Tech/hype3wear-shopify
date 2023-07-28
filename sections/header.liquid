@@ -861,33 +861,35 @@
     }).then(response => response.json())
     console.log("hello: ", tokenNFTS)
 
-
-    let config = {"X-API-Key": "30Gj6TFjr7ZG7F4KyEP19HNuSuc5f2UC3VYpcPqww3IJlpIkOImimChpNNzgm5Cv", "accept":"application/json"};
-    const tokenAccounts = await fetch(`https://solana-gateway.moralis.io/account/mainnet/${publicKey.toString()}/nft`, {
-      headers: config
-    }).then(response => response.json())
-    console.log("tokenAccounts: ", tokenAccounts)
+    //let config = {"X-API-Key": "30Gj6TFjr7ZG7F4KyEP19HNuSuc5f2UC3VYpcPqww3IJlpIkOImimChpNNzgm5Cv", "accept":"application/json"};
+    //const tokenAccounts = await fetch(`https://solana-gateway.moralis.io/account/mainnet/${publicKey.toString()}/nft`, {
+    //  headers: config
+    //}).then(response => response.json())
+    //console.log("tokenAccounts: ", tokenAccounts)
+    
     const nfts = [];
-    for (let i = 0; i < tokenAccounts.length; i++) {
-      const mint = tokenAccounts[i].mint;
-      let config = {"X-API-Key": "30Gj6TFjr7ZG7F4KyEP19HNuSuc5f2UC3VYpcPqww3IJlpIkOImimChpNNzgm5Cv", "accept":"application/json"};
-      await fetch(`https://solana-gateway.moralis.io/nft/mainnet/${mint}/metadata`, {
-        headers: config
-      })
-        .then(response => response.json())
-        .then(async(data) => {
-          // Process the fetched data
-          await fetch(data.metaplex.metadataUri).then(res => res.json())
-          .then(data => {
-            nfts.push(data.image)
-          }).catch(err=>{console.log(err)})
-          
-        })
-        .catch(error => {
-          // Handle any errors
-          console.error(error);
-        });
+    for (let i = 0; i < tokenNFTS.result.length; i++) {
+      nfts.push(tokenNFTS.result[i].image_url)
     }
+    //  const mint = tokenNFTS.result[i].mint;
+    //  let config = {"X-API-Key": "30Gj6TFjr7ZG7F4KyEP19HNuSuc5f2UC3VYpcPqww3IJlpIkOImimChpNNzgm5Cv", "accept":"application/json"};
+    //  await fetch(`https://solana-gateway.moralis.io/nft/mainnet/${mint}/metadata`, {
+    //    headers: config
+    //  })
+    //    .then(response => response.json())
+    //    .then(async(data) => {
+          // Process the fetched data
+    //      await fetch(data.metaplex.metadataUri).then(res => res.json())
+    //      .then(data => {
+    //        nfts.push(data.image)
+    //      }).catch(err=>{console.log(err)})
+          
+    //    })
+    //    .catch(error => {
+          // Handle any errors
+    //      console.error(error);
+    //    });
+    //}
     console.log("nfts:", nfts)
     return nfts;
   }
