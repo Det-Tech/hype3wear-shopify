@@ -685,7 +685,6 @@
     });
 
     document.getElementById("confirm-submit").addEventListener("click", ()=>{
-      document.getElementById('confirm-close').click();
       if(document.getElementById("confirm-name").value == ""){
         SlimNotifierJs.notification('info', 'Please input your name!', '', 2000);
         return;
@@ -746,6 +745,7 @@
           SlimNotifierJs.notification('error', 'Got error! plz try it again', '', 2000);
         }
       }).catch(err=> { console.log(err); SlimNotifierJs.notification('error', 'Got error! plz try it again', '', 2000);})
+      document.getElementById('confirm-close').click();
     });
 
   </script>
