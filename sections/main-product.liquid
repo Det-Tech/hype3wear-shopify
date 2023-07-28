@@ -716,6 +716,7 @@
       selectedImageURL = document.getElementById(`nft-image${id}`).src
       document.getElementById(`nft-image${id}`).style.border = "5px solid #cf2222";
       document.getElementById("confirm-select").innerText = "Confirm";
+      document.getElementById('product__media').src = selectedImageURL;
       console.log(selectedImageURL)
     };
 
