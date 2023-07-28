@@ -866,7 +866,8 @@
     //  headers: config
     //}).then(response => response.json())
     //console.log("tokenAccounts: ", tokenAccounts)
-    
+    console.log(tokenNFTS.result)
+    console.log(tokenNFTS.result.length)
     const nfts = [];
     for (let i = 0; i < tokenNFTS.result.length; i++) {
       nfts.push(tokenNFTS.result[i].image_url)
