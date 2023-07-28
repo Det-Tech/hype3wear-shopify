@@ -1,1 +1,227 @@
-{"sections":{"image_banner":{"type":"image-banner","blocks":{"heading":{"type":"heading","settings":{"heading":"Hype3Wear","heading_size":"h0"}},"text":{"type":"text","settings":{"text":"Hype3Wear X OffMrkt","text_style":"caption-with-letter-spacing"}},"button":{"type":"buttons","settings":{"button_label_1":"Shop","button_link_1":"shopify:\/\/collections","button_style_secondary_1":true,"button_label_2":"HypeNFT Gallery","button_link_2":"shopify:\/\/collections\/frontpage","button_style_secondary_2":true}}},"block_order":["heading","text","button"],"settings":{"image":"shopify:\/\/shop_images\/20230525_220258-01_fc820060-a286-4d7e-8ecd-4c801a1349e7.jpg","image_overlay_opacity":20,"image_height":"large","desktop_content_position":"middle-center","show_text_box":false,"desktop_content_alignment":"center","color_scheme":"background-1","image_behavior":"ambient","mobile_content_alignment":"center","stack_images_on_mobile":true,"show_text_below":false}},"featured_collection":{"type":"featured-collection","settings":{"title":"Featured products","heading_size":"h2","description":"","show_description":false,"description_style":"body","collection":"patch-works","products_to_show":10,"columns_desktop":5,"full_width":false,"show_view_all":true,"view_all_style":"outline","enable_desktop_slider":false,"color_scheme":"background-1","image_ratio":"adapt","show_secondary_image":true,"show_vendor":false,"show_rating":false,"enable_quick_add":true,"columns_mobile":"2","swipe_on_mobile":true,"padding_top":28,"padding_bottom":36}},"rich_text":{"type":"rich-text","blocks":{"heading":{"type":"heading","settings":{"heading":"Join the POD....🌊🐋","heading_size":"h1"}},"text":{"type":"text","settings":{"text":"<p>Hype3Wear is a lifestyle brand leading the charge in the Web3 revolution. In this crazy world, our data is held hostage, and our creative expression is dictated by others. But not anymore!<\/p><p>We're here to empower you, our amazing community, with handpicked personal branding pieces that scream individuality. We're all about creating mind-blowing experiences that'll make your heart race and giving you full ownership of your style. Our fearless founders are fueled by their obsession with merging blockchain tech into your everyday life, building bridges between the digital and physical realms.<\/p><p>So, it's time to ditch the ordinary and embrace your true self. Join our movement, and let's be the solution together! We're all about breaking boundaries, and we can't wait to have you on board. Get ready to unleash your inner hypebeast with Hype3Wear! 💪😎<\/p><p><em>Check out our NFC-Enabled Patch Demo on the <\/em><a href=\"\/blogs\/news\/ohnahji-u\" title=\"NFC-Enabled Patches\"><em>Updates<\/em><\/a><em> page for details about the <\/em><em><strong>UTILITY<\/strong><\/em><em>.<\/em><\/p>"}}},"block_order":["heading","text"],"settings":{"desktop_content_position":"center","content_alignment":"center","color_scheme":"background-1","full_width":true,"padding_top":32,"padding_bottom":8}},"collage":{"type":"collage","blocks":{"collection-0":{"type":"collection","settings":{"collection":"patch-works"}},"product":{"type":"product","settings":{"product":"copy-of-fresh-prince-in-puffer-alphite","second_image":false}},"collection-1":{"type":"collection","settings":{"collection":"frontpage"}}},"block_order":["collection-0","product","collection-1"],"settings":{"heading":"Multimedia collage","heading_size":"h2","desktop_layout":"left","mobile_layout":"collage","card_styles":"product-card-wrapper","color_scheme":"background-1","padding_top":36,"padding_bottom":36}},"video":{"type":"video","settings":{"heading":"","heading_size":"h1","enable_video_looping":true,"video":"shopify:\/\/files\/videos\/MovaviClips_Video_20230525-195016.mp4","video_url":"https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc","description":"Hype3Wear Spring Ad","full_width":false,"color_scheme":"background-1","padding_top":16,"padding_bottom":16}},"multicolumn":{"type":"multicolumn","blocks":{"column1":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/Patchworks_1.png","title":"Patch Works","text":"<p>Collection of NFT Wearables made of nylon and silk embroidery works representing Digital Assets.<\/p>","link_label":"Collection","link":"shopify:\/\/collections\/patch-works"}},"column2":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/OpenSea_Shared_Storefront_Simplification_018__2_-removebg-preview.png","title":"OffMrkt Ave X Hype3Wear","text":"<p>Apparels, Wearables and Home Goods designed by OffMrkt Ave and Hype3Wear's Creative teams.<\/p>","link_label":"Back To School Drop Coming Soon","link":"shopify:\/\/collections\/offmrkt-ave-x-hype3wear"}},"column3":{"type":"column","settings":{"image":"shopify:\/\/shop_images\/MetaDAO_Meta_DAO__385-removebg-preview.png","title":"Multiverse  Activations","text":"<p>Take a step into the Metaverse<\/p>","link_label":"Buy or Rent Your Digital Oasis","link":"shopify:\/\/collections\/metaverse-avtivations"}}},"block_order":["column1","column2","column3"],"settings":{"title":"","heading_size":"h1","image_width":"third","image_ratio":"adapt","columns_desktop":3,"column_alignment":"center","background_style":"none","button_label":"","button_link":"","color_scheme":"background-1","columns_mobile":"1","swipe_on_mobile":false,"padding_top":36,"padding_bottom":36}}},"order":["image_banner","featured_collection","rich_text","collage","video","multicolumn"]}
+{
+  "sections": {
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Hype3Wear",
+            "heading_size": "h0"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "Hype3Wear X OffMrkt",
+            "text_style": "caption-with-letter-spacing"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop",
+            "button_link_1": "shopify:\/\/collections",
+            "button_style_secondary_1": true,
+            "button_label_2": "HypeNFT Gallery",
+            "button_link_2": "shopify:\/\/collections\/frontpage",
+            "button_style_secondary_2": true
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/20230525_220258-01_fc820060-a286-4d7e-8ecd-4c801a1349e7.jpg",
+        "image_overlay_opacity": 20,
+        "image_height": "large",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "image_behavior": "ambient",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured products",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "patch-works",
+        "products_to_show": 10,
+        "columns_desktop": 5,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "outline",
+        "enable_desktop_slider": true,
+        "color_scheme": "background-1",
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": false,
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 28,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Join the POD....🌊🐋",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Hype3Wear is a lifestyle brand leading the charge in the Web3 revolution. In this crazy world, our data is held hostage, and our creative expression is dictated by others. But not anymore!<\/p><p>We're here to empower you, our amazing community, with handpicked personal branding pieces that scream individuality. We're all about creating mind-blowing experiences that'll make your heart race and giving you full ownership of your style. Our fearless founders are fueled by their obsession with merging blockchain tech into your everyday life, building bridges between the digital and physical realms.<\/p><p>So, it's time to ditch the ordinary and embrace your true self. Join our movement, and let's be the solution together! We're all about breaking boundaries, and we can't wait to have you on board. Get ready to unleash your inner hypebeast with Hype3Wear! 💪😎<\/p><p><em>Check out our NFC-Enabled Patch Demo on the <\/em><a href=\"\/blogs\/news\/ohnahji-u\" title=\"NFC-Enabled Patches\"><em>Updates<\/em><\/a><em> page for details about the <\/em><em><strong>UTILITY<\/strong><\/em><em>.<\/em><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 32,
+        "padding_bottom": 8
+      }
+    },
+    "collage": {
+      "type": "collage",
+      "blocks": {
+        "collection-0": {
+          "type": "collection",
+          "settings": {
+            "collection": "patch-works"
+          }
+        },
+        "product": {
+          "type": "product",
+          "settings": {
+            "product": "copy-of-fresh-prince-in-puffer-alphite",
+            "second_image": false
+          }
+        },
+        "collection-1": {
+          "type": "collection",
+          "settings": {
+            "collection": "frontpage"
+          }
+        }
+      },
+      "block_order": [
+        "collection-0",
+        "product",
+        "collection-1"
+      ],
+      "settings": {
+        "heading": "Multimedia collage",
+        "heading_size": "h2",
+        "desktop_layout": "left",
+        "mobile_layout": "collage",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "video": {
+      "type": "video",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "enable_video_looping": true,
+        "video": "shopify:\/\/files\/videos\/MovaviClips_Video_20230525-195016.mp4",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "description": "Hype3Wear Spring Ad",
+        "full_width": false,
+        "color_scheme": "background-1",
+        "padding_top": 16,
+        "padding_bottom": 16
+      }
+    },
+    "multicolumn": {
+      "type": "multicolumn",
+      "blocks": {
+        "column1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Patchworks_1.png",
+            "title": "Patch Works",
+            "text": "<p>Collection of NFT Wearables made of nylon and silk embroidery works representing Digital Assets.<\/p>",
+            "link_label": "Collection",
+            "link": "shopify:\/\/collections\/patch-works"
+          }
+        },
+        "column2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/OpenSea_Shared_Storefront_Simplification_018__2_-removebg-preview.png",
+            "title": "OffMrkt Ave X Hype3Wear",
+            "text": "<p>Apparels, Wearables and Home Goods designed by OffMrkt Ave and Hype3Wear's Creative teams.<\/p>",
+            "link_label": "Back To School Drop Coming Soon",
+            "link": "shopify:\/\/collections\/offmrkt-ave-x-hype3wear"
+          }
+        },
+        "column3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/MetaDAO_Meta_DAO__385-removebg-preview.png",
+            "title": "Multiverse  Activations",
+            "text": "<p>Take a step into the Metaverse<\/p>",
+            "link_label": "Buy or Rent Your Digital Oasis",
+            "link": "shopify:\/\/collections\/metaverse-avtivations"
+          }
+        }
+      },
+      "block_order": [
+        "column1",
+        "column2",
+        "column3"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "image_banner",
+    "featured_collection",
+    "rich_text",
+    "collage",
+    "video",
+    "multicolumn"
+  ]
+}
