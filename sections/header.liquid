@@ -895,7 +895,7 @@
 
   async function getProvider() {
     if (window.phantom?.solana?.isPhantom || window.solana?.isPhantom) {
-      const wallet = window.phantom?.solana || window.solana!;
+      const wallet = window.phantom?.solana || window.solana;
       await wallet.connect();
       if (wallet.isPhantom) {
         console.log("Is Phantom installed?  ", wallet.isPhantom);
